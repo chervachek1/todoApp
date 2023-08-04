@@ -49,7 +49,12 @@ THIRD_PARTY = [
 ]
 
 LOCAL_APPS = [
+    'users',
     'todo'
+]
+
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY + LOCAL_APPS
@@ -135,13 +140,6 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 MEDIA_URL = 'media/'
-
-STATIC_ROOT = os.path.join(STATIC_DIR, 'static/')
-MEDIA_ROOT = os.path.join(STATIC_DIR, 'media/')
-
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
